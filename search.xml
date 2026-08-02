@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Markdown测试</title>
+    <url>/2026/08/02/Markdown%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<h1 id="一级标题">一级标题</h1>
+<h2 id="二级标题">二级标题</h2>
+<h3 id="三级标题">三级标题</h3>
+<h4 id="四级标题">四级标题</h4>
+<h5 id="五级标题">五级标题</h5>
+<h6 id="六级标题">六级标题</h6>
+<hr />
+<span id="more"></span>
+<p>代码块测试</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;Hello World\n&quot;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>长代码</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> BUFFER_SIZE 4096</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;=======================\n&quot;</span>);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;Welcome to Simple Shell\n&quot;</span>);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;=======================\n&quot;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;sh &gt; &quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">char</span> input[BUFFER_SIZE];</span><br><span class="line">    <span class="built_in">memset</span>(input, <span class="number">0</span>, <span class="keyword">sizeof</span>(input));</span><br><span class="line">    <span class="keyword">if</span> (fgets(input, <span class="keyword">sizeof</span>(input) - <span class="number">1</span>, <span class="built_in">stdin</span>) &lt; <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">      perror(<span class="string">&quot;Failed to get inputs from stdin&quot;</span>);</span><br><span class="line">      <span class="built_in">exit</span>(EXIT_FAILURE);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;You input: %s\n&quot;</span>, input);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">strncmp</span>(input, <span class="string">&quot;exit\n&quot;</span>, <span class="number">5</span>) == <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">exit</span>(EXIT_SUCCESS);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr />
+<p>公式测试</p>
+<p>行内公式：<span class="math inline">\(y = f(x)\)</span></p>
+<p>行间公式：</p>
+<p><span class="math display">\[
+\begin{equation} \label{eq1}
+E=mc^2
+\end{equation}
+\]</span></p>
+<p>爱因斯坦提出了著名的质能方程 <span
+class="math inline">\(\eqref{eq1}\)</span>。</p>
+<hr />
+<p>Mermaid图表</p>
+<pre><code class="highlight mermaid">graph TD
+A[Hard] --&gt;|Text| B(Round)
+B --&gt; C&#123;Decision&#125;
+C --&gt;|One| D[Result 1]
+C --&gt;|Two| E[Result 2]</code></pre>
+<hr />
+<p>Callout测试</p>
+<div class="note "><h4 id="header">Header</h4>
+<p>(without define class style)</p>
+</div>
+<div class="note default"><h4 id="default-header">Default Header</h4>
+<p>Welcome to <a href="https://hexo.io">Hexo!</a></p>
+</div>
+<div class="note primary"><h4 id="primary-header">Primary Header</h4>
+<p><strong>Welcome</strong> to <a href="https://hexo.io">Hexo!</a></p>
+</div>
+<div class="note info"><h4 id="info-header">Info Header</h4>
+<p><strong>Welcome</strong> to <a href="https://hexo.io">Hexo!</a></p>
+</div>
+<div class="note success"><h4 id="success-header">Success Header</h4>
+<p><strong>Welcome</strong> to <a href="https://hexo.io">Hexo!</a></p>
+</div>
+<div class="note warning"><h4 id="warning-header">Warning Header</h4>
+<p><strong>Welcome</strong> to <a href="https://hexo.io">Hexo!</a></p>
+</div>
+<div class="note danger"><h4 id="danger-header">Danger Header</h4>
+<p><strong>Welcome</strong> to <a href="https://hexo.io">Hexo!</a></p>
+</div>
+<div class="note info no-icon"><h4 id="no-icon-note">No icon note</h4>
+<p>Note <strong>without</strong> icon:
+<code>note info no-icon</code></p>
+</div>
+<details class="note primary"><summary><p>This is a summary</p>
+</summary>
+<h4 id="details-and-summary">Details and summary</h4>
+<p>Note with summary: <code>note primary This is a summary</code></p>
+
+</details>
+<hr />
+<p>Tab测试</p>
+<div class="tabs" id="first-unique-name"><ul class="nav-tabs"><li class="tab"><a href="#first-unique-name-1"><i class="fa fa-text-width"></i>Solution 1</a></li><li class="tab active"><a href="#first-unique-name-2"><i class="fa fa-font"></i>Solution 2</a></li><li class="tab"><a href="#first-unique-name-3"><i class="fa fa-bold"></i>Solution 3</a></li></ul><div class="tab-content"><div class="tab-pane" id="first-unique-name-1"><p><strong>This is Tab 1.</strong></p></div><div class="tab-pane active" id="first-unique-name-2"><p><strong>This is Tab 2.</strong></p></div><div class="tab-pane" id="first-unique-name-3"><p><strong>This is Tab 3.</strong></p></div></div></div>
+<p><span class="math display">\[
+\]</span></p>
+]]></content>
+      <categories>
+        <category>杂项</category>
+      </categories>
+      <tags>
+        <tag>Test</tag>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+</search>
